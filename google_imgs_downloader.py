@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 run = True
 print(50*'=')
-print("In which directory do you want to save the images?\ne.g. C:/Users/daniel/Desktop/images \n(you can use \ as well)\n\u001b[31mDON'T USE ''\u001b[0m")
+print("In which directory do you want to save the images?\ne.g. C:/Users/daniel/Desktop/images \n(you can use \ as well)\nDON'T USE ''")
 directory = str(input('Directory: '))
 while run:
     print('')
@@ -61,7 +61,7 @@ while run:
                 with open(f'{directory}/{search}_{i + img_index - len(links_list)}.png', 'wb') as f: #wb = write byte
                     f.write(img.content)
         
-    print('\u001b[31mDONE!\u001b[0m')
+    print('DONE!')
     print('')
     if img_index < num_of_img:
         print(f"It was only possible to download {img_index} images")
